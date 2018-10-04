@@ -22,8 +22,8 @@ As I was unable to get the script to run automatically on Safari launch,  I crea
         		click menu item "Show Extension Builder" of menu "Develop" of menu bar 1
         		set frontmost to true
         		delay 0.5
-    		
-    			set myCount to count row of table 1 of scroll area 1 of splitter group 1 of window "Extension Builder"
+			
+			set myCount to count row of table 1 of scroll area 1 of splitter group 1 of window "Extension Builder"
     		
 	    		repeat 6 times  -- MUST BE GREATER THAN THE # OF EXTENSIONS IN YOUR EXTENSION BUILDER
 				key code 125
@@ -51,21 +51,21 @@ Here is just the altered AppleScript to loops through and run all of your extens
         	click menu item "Show Extension Builder" of menu "Develop" of menu bar 1
         	set frontmost to true
         	delay 0.5
-    		
-    		set myCount to count row of table 1 of scroll area 1 of splitter group 1 of window "Extension Builder"
-    		
-	    	repeat 6 times  -- MUST BE GREATER THAN THE # OF EXTENSIONS IN YOUR EXTENSION BUILDER
-				key code 125
-			end repeat
 		
-			repeat with counter from 1 to myCount
-				click row counter of table 1 of scroll area 1 of splitter group 1 of window "Extension Builder"
-				click button "Run" of splitter group 1 of window "Extension Builder"
-				delay 0.5
-				key code 126
-			end repeat
+		set myCount to count row of table 1 of scroll area 1 of splitter group 1 of window "Extension Builder"
+    		
+		repeat 6 times  -- MUST BE GREATER THAN THE # OF EXTENSIONS IN YOUR EXTENSION BUILDER
+			key code 125
+		end repeat
 		
-			click button 1 of window "Extension Builder"
-		end tell
+		repeat with counter from 1 to myCount
+			click row counter of table 1 of scroll area 1 of splitter group 1 of window "Extension Builder"
+			click button "Run" of splitter group 1 of window "Extension Builder"
+			delay 0.5
+			key code 126
+		end repeat
+		
+		click button 1 of window "Extension Builder"
 	end tell
+    end tell
 
