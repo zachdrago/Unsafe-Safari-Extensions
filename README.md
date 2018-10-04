@@ -68,4 +68,3 @@ Here is just the altered AppleScript to loops through and run all of your extens
 		click button 1 of window "Extension Builder"
 	end tell
     end tell
-
