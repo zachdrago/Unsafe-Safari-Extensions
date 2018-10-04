@@ -16,16 +16,16 @@ With the help of the article above, and the community of commenters, I have put 
 As I was unable to get the script to run automatically on Safari launch,  I created an Automator App to help a bit. The code below opens Safari, and then loops through and runs all of your extensions in Extension Builder (*you still have to manually enter your system password for each one* ). You can download mine [here](https://github.com/zachdrago/Unsafe-Safari-Extensions/raw/master/Safari%20Extensions.zip), or create your own in Automator using the code below:
 
 	tell application "Safari" to activate
-    tell application "System Events"
-        tell process "Safari"
-        	set frontmost to true
-        	click menu item "Show Extension Builder" of menu "Develop" of menu bar 1
-        	set frontmost to true
-        	delay 0.5
+	tell application "System Events"
+        	tell process "Safari"
+        		set frontmost to true
+        		click menu item "Show Extension Builder" of menu "Develop" of menu bar 1
+        		set frontmost to true
+        		delay 0.5
     		
-    		set myCount to count row of table 1 of scroll area 1 of splitter group 1 of window "Extension Builder"
+    			set myCount to count row of table 1 of scroll area 1 of splitter group 1 of window "Extension Builder"
     		
-	    	repeat 6 times  -- MUST BE HIGHER THAN THE # OF EXTENSIONS IN YOUR EXTENSION BUILDER
+	    		repeat 6 times  -- MUST BE GREATER THAN THE # OF EXTENSIONS IN YOUR EXTENSION BUILDER
 				key code 125
 			end repeat
 		
