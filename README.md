@@ -13,7 +13,7 @@ With the help of the article above, and the community of commenters, I have put 
 
 
 ## Automator App
-As I was unable to get the script to run automatically on Safari launch,  I created an Automator App to help a bit. The code below opens Safari, and then loops through and runs all of your extensions in Extension Builder (*you still have to manually enter your system password for each one* ). You can download mine [here](http://google.com), or create your own in Automator using the code below:
+As I was unable to get the script to run automatically on Safari launch,  I created an Automator App to help a bit. The code below opens Safari, and then loops through and runs all of your extensions in Extension Builder (*you still have to manually enter your system password for each one* ). You can download mine [here](https://github.com/zachdrago/Unsafe-Safari-Extensions/raw/master/Safari%20Extensions.zip), or create your own in Automator using the code below:
 
 	tell application "Safari" to activate
     tell application "System Events"
